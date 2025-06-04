@@ -2,7 +2,7 @@ import masks
 
 
 def check_card_mask(card: int, result: str) -> bool:
-    """Проверка функции маскировки карты"""
+    """ Проверка функции маскировки карты """
     masked_card = masks.get_mask_card_number(card)
     if masked_card == result:
         return True
@@ -11,7 +11,7 @@ def check_card_mask(card: int, result: str) -> bool:
 
 
 def check_account_mask(account: int, result: str) -> bool:
-    """Проверка функции маскировки аккаунта"""
+    """ Проверка функции маскировки аккаунта """
     masked_account = masks.get_mask_account(account)
     if masked_account == result:
         return True
