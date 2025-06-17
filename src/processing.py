@@ -1,4 +1,4 @@
-def filter_by_state(dictionaries: list, state='EXECUTED') -> list:
+def filter_by_state(dictionaries: list, state='EXECUTED': str) -> list:
     result = []
     for i in dictionaries:
         if i.get('state') == state:
