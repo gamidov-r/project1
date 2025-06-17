@@ -1,9 +1,9 @@
 def filter_by_state(dictionaries: list, state: str = "EXECUTED") -> list:
     """сортировка словарей по ключу"""
     result = []
-    for i in dictionaries:
-        if i.get("state") == state:
-            result.append(i)
+    for item in dictionaries:
+        if item.get("state") == state:
+            result.append(item)
     return result
 
 
