@@ -3,7 +3,7 @@ import widget
 
 
 
-@pytest.mark.parametrize("card, expected", [('1234345656787890', '1234 34** **** 6789'), ('1321123123123123123123123123123123123123', '**3123'), ('', '**')])
+@pytest.mark.parametrize("card, expected", [('1234345656787890', '1234 34** **** 7890'), ('1321123123123123123123123123123123123123', '**3123'), ('', '**')])
 def test_mask_account_card(card, expected):
     assert widget.mask_account_card(card)  == expected
 
