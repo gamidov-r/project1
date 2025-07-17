@@ -2,6 +2,7 @@ from typing import Generator
 
 
 def filter_by_currency(transactions: dict, code: str) -> Generator:
+    """ Обработка списка словарей, фильтрация по ключу (типу валюты) """
     filtered_trans = list(filter(lambda x: x.get("operationAmount").get("currency").get("code") == code, transactions))
     # print(list(filtered_trans))
     for index in range(len(list(filtered_trans))):
@@ -9,11 +10,13 @@ def filter_by_currency(transactions: dict, code: str) -> Generator:
 
 
 def transaction_descriptions(transactions: dict) -> Generator:
+    """ генерация описаний к транзакциям """
     for item in transactions:
         yield item.get("description")
 
 
-def card_number_generator(first: int, last: int) -> Generator:
+def card_number_generator(start: int, stop: int) -> Generator:
+    """ генерация номеров карт с заданным промежутком в порядке возрастания """
     if first >= last:
         yield "error"
     for index in range(first, last + 1):
