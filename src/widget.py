@@ -10,6 +10,9 @@ def mask_account_card(txt: str) -> str:
         masked_card = "".join(lst)
     elif len(card) > 16:
         masked_card = "**" + str(card)[-4:]
+    else:
+        masked_card = "**"# + str(card)[-4:]
+
     return txt.replace(card, masked_card)
 
 
