@@ -17,7 +17,7 @@ def transaction_descriptions(transactions: dict) -> Generator:
 
 def card_number_generator(start: int, stop: int) -> Generator:
     """ генерация номеров карт с заданным промежутком в порядке возрастания """
-    if first >= last:
+    if start >= stop:
         yield "error"
-    for index in range(first, last + 1):
+    for index in range(start, stop + 1):
         yield "0000 0000 0000 0000"[: -len(str(index))] + str(index)
