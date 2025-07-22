@@ -1,6 +1,7 @@
 def get_mask_card_number(card: int) -> str:
     """Маскировка номера карты звездочками"""
-    if len(str(card)) == 19: card = str(card).replace(' ', '')
+    if len(str(card)) == 19:
+        card = str(card).replace(" ", "")
     tmp = str(card).replace(str(card)[6:12], "******")
     lst = list(tmp)
     lst.insert(12, " ")

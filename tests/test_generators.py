@@ -49,7 +49,7 @@ transactions = [
 ]
 
 
-def test_filter_by_currency()-> None:
+def test_filter_by_currency() -> None:
     expected_result = [
         {
             "id": 939719570,
@@ -85,7 +85,7 @@ def test_filter_by_currency()-> None:
         assert next(usd_transactions) == expected_result[_]
 
 
-def test_transaction_descriptions()-> None:
+def test_transaction_descriptions() -> None:
     expected_result = [
         "Перевод организации",
         "Перевод со счета на счет",
@@ -98,7 +98,7 @@ def test_transaction_descriptions()-> None:
         assert next(descriptions) == expected_result[index]
 
 
-def test_card_number_generator()-> None:
+def test_card_number_generator() -> None:
     cards = generators.card_number_generator(1, 5)
     assert next(cards) == "0000 0000 0000 0001"
     assert next(cards) == "0000 0000 0000 0002"

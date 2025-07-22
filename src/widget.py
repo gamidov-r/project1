@@ -11,7 +11,7 @@ def mask_account_card(txt: str) -> str:
     elif len(card) > 16:
         masked_card = "**" + str(card)[-4:]
     else:
-        masked_card = "**"# + str(card)[-4:]
+        masked_card = "**"  # + str(card)[-4:]
 
     return txt.replace(card, masked_card)
 
