@@ -7,8 +7,8 @@ load_dotenv()
 API_KEY = os.getenv("API_KEY")
 URL = "https://api.apilayer.com/exchangerates_data/convert"
 
-DEBUG = True  # возврат заглушки, минуя работу с api
-# DEBUG = False  # работа напрямую с api
+# DEBUG = True  # возврат заглушки, минуя работу с api
+DEBUG = False  # работа напрямую с api
 
 
 mock = {
