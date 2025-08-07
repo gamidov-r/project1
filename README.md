@@ -44,3 +44,18 @@ print(sort_by_date(test))
 
 ## Домашня работа 12.2
  добавлено логирование в модули masks и utils
+ 
+## Домашня работа 13.1
+ Добавлен модуль pd_transactions, в котором реализованы функции чтения транзакций из csv и xlsx файлов с конвертацией в словари
+ пример использования
+ ```
+# импортирование модуля
+import pd_transactions
+
+# вывод словаря с транзакциями, где path_to_csv является путем к файлу .csv
+print(pd_transactions.read_transactions_csv(path_to_csv))
+
+# чтение excel файла, аналогично описанию предыдущей функции
+print(pd_transactions.read_transactions_excel(path_to_excel))
+
+```
