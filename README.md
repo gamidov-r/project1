@@ -59,3 +59,10 @@ print(pd_transactions.read_transactions_csv(path_to_csv))
 print(pd_transactions.read_transactions_excel(path_to_excel))
 
 ```
+
+## Домашня работа 13.2
+
+Обновлен модуль main.py:
+- добавлена функция process_bank_search для 
+  фильтрации транзакций по критериям
+- функция main приветствует пользователя, по заданным критериям выводит список операций
